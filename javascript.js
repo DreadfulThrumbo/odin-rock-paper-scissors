@@ -4,7 +4,7 @@ function getRandomInt(max) {
 
 function getComputerChoice() {
     let randomInt = getRandomInt(3);
-    let choice = "hi"
+    let choice;
 
     switch (randomInt) {
         case 0:
@@ -23,3 +23,13 @@ function getComputerChoice() {
     return choice;
 }
 
+function getHumanChoice() {
+    let choice = prompt("Choose rock, paper, or scissors");
+
+    if (choice.toLowerCase() === "rock" || choice.toLowerCase() === "paper" || choice.toLowerCase() === "scissors") {
+        return choice;
+    } else {
+        choice = "rock";
+        return choice;
+    }
+}
